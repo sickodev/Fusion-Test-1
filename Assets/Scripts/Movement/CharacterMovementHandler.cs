@@ -9,6 +9,7 @@ public class CharacterMovementHandler : NetworkBehaviour
 
     Camera localCamera;
     float cameraRotationX = 0;
+    private Animator localAnimator;
 
 
     NetworkCharacterControllerPrototypeCustom networkCharacterControllerPrototypeCustom;
@@ -17,6 +18,8 @@ public class CharacterMovementHandler : NetworkBehaviour
     {
         networkCharacterControllerPrototypeCustom = GetComponent<NetworkCharacterControllerPrototypeCustom>();
         localCamera = GetComponentInChildren<Camera>();
+        localAnimator = GetComponentInChildren<Animator>();
+        viewInput = Vector2.zero;
     }
 
     // Start is called before the first frame update
@@ -58,6 +61,14 @@ public class CharacterMovementHandler : NetworkBehaviour
             {
                 networkCharacterControllerPrototypeCustom.Jump();
             }
+
+            //Animate
+            if (networkInputData.isArmorRotatePressed)
+            {
+                localAnimator.SetBool("dance", networkInputData.isArmorRotatePressed);
+            }
         }
     }
+
+
 }

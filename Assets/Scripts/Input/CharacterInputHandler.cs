@@ -8,6 +8,9 @@ public class CharacterInputHandler : MonoBehaviour
     Vector2 moveInputVector = Vector2.zero;
     Vector2 viewInputVector = Vector2.zero;
     bool isJumpBtnPressed = false;
+    bool isArmorRotateBtnPressed = false;
+
+    Animator localAnimator;
 
     CharacterMovementHandler characterMovementHandler;
 
@@ -38,6 +41,9 @@ public class CharacterInputHandler : MonoBehaviour
 
         //Jump
         isJumpBtnPressed = Input.GetButtonDown("Jump");
+
+        //Animation
+        isArmorRotateBtnPressed = Input.GetKey(KeyCode.R);
     }
 
     public NetworkInputData GetNetworkInput()
@@ -52,6 +58,9 @@ public class CharacterInputHandler : MonoBehaviour
 
         //Jump Data
         networkInputData.isJumpPressed = isJumpBtnPressed;
+
+        //Animation
+        networkInputData.isArmorRotatePressed = isArmorRotateBtnPressed;
 
         return networkInputData;
     }
