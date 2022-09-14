@@ -1978,14 +1978,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6075107513248303950}
-  - component: {fileID: 3270938194926553126}
   - component: {fileID: 3651022034503238321}
   - component: {fileID: 1844783044515236009}
   - component: {fileID: 1554955682729486046}
   - component: {fileID: -4491139672851869345}
-  - component: {fileID: 7666307777175718889}
   - component: {fileID: 7104921144205624210}
   - component: {fileID: 1033255222072515301}
+  - component: {fileID: 7054578767316264210}
   m_Layer: 0
   m_Name: NetworkPlayer YBot PF
   m_TagString: Untagged
@@ -2010,26 +2009,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &3270938194926553126
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6985326015526652582}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 90a64845d1cf226499788354f6ec9390, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!143 &3651022034503238321
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2087,6 +2066,7 @@ MonoBehaviour:
   - {fileID: 1844783044515236009}
   - {fileID: -4491139672851869345}
   - {fileID: 7104921144205624210}
+  - {fileID: 7054578767316264210}
   SimulationBehaviours: []
 --- !u!114 &-4491139672851869345
 MonoBehaviour:
@@ -2123,18 +2103,6 @@ MonoBehaviour:
   viewUpDownRotationSpeed: 100
   _IsGrounded: 0
   _Velocity: {x: 0, y: 0, z: 0}
---- !u!114 &7666307777175718889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6985326015526652582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81a6a432f8b09d40a358a7352dc7d8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7104921144205624210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2160,6 +2128,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f1f8fb3c4b44245b9dec0904a9d6c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7054578767316264210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6985326015526652582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2a34496346f11b488f6181f9e79a09d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  _isDancing: 0
+  animator: {fileID: 3817414301153524336}
 --- !u!1 &7040259433246882353
 GameObject:
   m_ObjectHideFlags: 0
@@ -2265,6 +2248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7170155542087939578}
+  - component: {fileID: 3817414301153524336}
   m_Layer: 0
   m_Name: Y Bot
   m_TagString: Untagged
@@ -2290,6 +2274,26 @@ Transform:
   m_Father: {fileID: 6075107513248303950}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3817414301153524336
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7550938801846316864}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 90a64845d1cf226499788354f6ec9390, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7666628486365608804
 GameObject:
   m_ObjectHideFlags: 0

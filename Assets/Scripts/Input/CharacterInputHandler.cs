@@ -8,7 +8,7 @@ public class CharacterInputHandler : MonoBehaviour
     Vector2 moveInputVector = Vector2.zero;
     Vector2 viewInputVector = Vector2.zero;
     bool isJumpBtnPressed = false;
-    bool isArmorRotateBtnPressed = false;
+    bool isFireBtnPressed = false;
 
     Animator localAnimator;
 
@@ -29,6 +29,9 @@ public class CharacterInputHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!characterMovementHandler.Object.HasInputAuthority)
+            return;
+
         //View
         viewInputVector.x = Input.GetAxis("Mouse X");
         viewInputVector.y = Input.GetAxis("Mouse Y") * -1;//inverted
@@ -42,8 +45,8 @@ public class CharacterInputHandler : MonoBehaviour
         //Jump
         isJumpBtnPressed = Input.GetButtonDown("Jump");
 
-        //Animation
-        isArmorRotateBtnPressed = Input.GetKey(KeyCode.R);
+        //Fire Buttton Animation
+        isFireBtnPressed = Input.GetButton("Fire1");
     }
 
     public NetworkInputData GetNetworkInput()
@@ -59,8 +62,12 @@ public class CharacterInputHandler : MonoBehaviour
         //Jump Data
         networkInputData.isJumpPressed = isJumpBtnPressed;
 
-        //Animation
-        networkInputData.isArmorRotatePressed = isArmorRotateBtnPressed;
+        //Fire Data
+        networkInputData.isFirePressed = isFireBtnPressed;
+
+        //Resetting variables
+        isJumpBtnPressed = false;
+        isFireBtnPressed = false;
 
         return networkInputData;
     }

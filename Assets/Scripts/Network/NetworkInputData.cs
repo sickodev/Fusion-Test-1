@@ -9,6 +9,8 @@ public struct NetworkInputData : INetworkInput
     public float rotationInput;
     public NetworkBool isJumpPressed;
 
-    [Networked(OnChanged = nameof(CharacterAnimationHandler.PlayerAnimate))]
-    public bool isArmorRotatePressed { get; set; }
+    // [Networked(OnChanged = nameof(CharacterAnimationHandler.PlayerAnimate))]
+    // public NetworkBool isArmorRotatePressed { get; set; }
+
+    public NetworkBool isFirePressed;
 }

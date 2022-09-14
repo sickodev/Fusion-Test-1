@@ -12,12 +12,12 @@ public class CharacterAnimationHandler : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
     }
 
-    public void PlayerAnimate()
-    {
-        if (networkInputData.isArmorRotatePressed)
-        {
-            animator.SetBool("dance", networkInputData.isArmorRotatePressed);
-            networkInputData.isArmorRotatePressed = false;
-        }
-    }
+    // public void PlayerAnimate()
+    // {
+    //     if (networkInputData.isArmorRotatePressed)
+    //     {
+    //         animator.SetBool("dance", networkInputData.isArmorRotatePressed);
+    //         networkInputData.isArmorRotatePressed = false;
+    //     }
+    // }
 }

@@ -63,10 +63,10 @@ public class CharacterMovementHandler : NetworkBehaviour
             }
 
             //Animate
-            if (networkInputData.isArmorRotatePressed)
-            {
-                localAnimator.SetBool("dance", networkInputData.isArmorRotatePressed);
-            }
+            // if (networkInputData.isArmorRotatePressed)
+            // {
+            //     localAnimator.SetBool("dance", networkInputData.isArmorRotatePressed);
+            // }
         }
     }
 
